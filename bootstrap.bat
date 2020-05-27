@@ -1,0 +1,1 @@
+ECHO If you can read this, things are all rainbows and unicorns > C:\workspace\dotfilesucceeded.txt
