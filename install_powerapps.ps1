@@ -3,4 +3,5 @@ $output = 'C:/dotfiles/cli.msi'
 Start-BitsTransfer -Source $url2 -Destination $output
 Start-Process $output -ArgumentList '/quiet' -Wait
 
-Copy-Item profile.ps1 $profile
+New-Item $profile -Force
+Copy-Item profile.ps1 $profile -Recurse -Force
