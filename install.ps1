@@ -12,7 +12,7 @@ Install-Module oh-my-posh -Scope CurrentUser -Confirm:$False -Force
 # 1. Download Cascadia Code font from GitHub
 $DLPath = 'https://github.com/microsoft/cascadia-code/releases/download/v2007.01/CascadiaCode-2007.01.zip'
 $DLFile = 'C:\dotfiles\download\Cascadia.zip'
-Invoke-WebRequest -Uri $DLPath -OutFile $DLFile
+Start-BitsTransfer -Source $DLPath -Destination $DLFile
 
 # 2. Unzip fonts
 expand-archive -path 'C:\dotfiles\download\Cascadia.zip' -destinationpath 'C:\dotfiles\download\unzipped'
