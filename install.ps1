@@ -1,3 +1,6 @@
+# Make sure NuGet minimum version 2.8.5.201 is here for some reason
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+
 # Install PowerApps CLI
 $url2 = 'https://download.microsoft.com/download/D/B/E/DBE69906-B4DA-471C-8960-092AB955C681/powerapps-cli-1.0.msi'
 $output = 'C:/dotfiles/cli.msi'
