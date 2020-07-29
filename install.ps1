@@ -22,3 +22,10 @@ if ((Test-Path -Path 'C:\workspace\.vscode\settings.json') -eq $False) {
 # Setup profile
 New-Item $profile -Force
 Copy-Item profile.ps1 $profile -Recurse -Force
+
+# Write dummy file for testing purposes
+if ((Test-Path -Path 'C:\workspace\test.txt') -eq $False) {
+    New-Item -Path 'C:\workspace\test.txt'
+}
+
+Add-Content -Path 'C:\workspace\test.txt' -Value (Get-Date)
